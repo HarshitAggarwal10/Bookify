@@ -1,23 +1,29 @@
-import logo from './logo.svg';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import RegisterPage from './pages/register';
+import LoginPage from './pages/login';
+import MyNavbar from './components/navbar';
+import ListingPage from './pages/list';
+import HomePage from './pages/home';
+import BookDetailPage from './pages/detail';
+import OrdersPage from './pages/viewOrder';
+import ViewOrderDetails from './pages/viewOrderDetail';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <MyNavbar />
+      <Routes>
+        <Route path='/' element={<HomePage />}></Route>
+        <Route path='/login' element={<LoginPage />}></Route>
+        <Route path='/register' element={<RegisterPage />}></Route>
+        <Route path='/book/List' element={<ListingPage />}></Route>
+        <Route path='/book/view/:bookId' element={<BookDetailPage />}></Route>
+        <Route path='/book/orders' element={<OrdersPage />}></Route>
+        <Route path='/books/orders/:bookId' element={<ViewOrderDetails />}></Route>
+
+      </Routes>
     </div>
   );
 }

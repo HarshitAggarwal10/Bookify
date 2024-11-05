@@ -1,0 +1,3 @@
+when user places an order i have to show notification that order is placed
+
+on the page where order is shown i have to give the function of accept or reject the order and i have change that state in firebase/firestore
