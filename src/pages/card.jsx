@@ -23,7 +23,7 @@ const BookCard = (props) => {
         </Card.Text>
         <Button variant="primary" onClick={(e) => 
           navigate(props.link)}>
-          View
+          View Now
         </Button>
       </Card.Body>
     </Card>
